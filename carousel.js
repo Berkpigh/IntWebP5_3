@@ -16,11 +16,15 @@ let imax = slides.length - 1;
 let icur = 0;
 let ipre = imax;
 
-let dot = "";
 for (let j=0; j <= imax; j++) {
-    dot = document.createElement("i");
-    dot.classlist.add("fa-regular", "fa-circle", "inactive");
+    let dot = document.createElement("i");
+    if (j === ipre) {
+        dot.classList.add("fa-regular", "fa-circle", "dot_selected");
+    } else {
+        dot.classList.add("fa-regular", "fa-circle", "dot");
+    }
     dots.appendChild(dot);
+    console.log(j)
 }
 
 function nextImageIndex(gd) {
@@ -32,11 +36,20 @@ function nextImageIndex(gd) {
 }
 
 function nextImage() {
+    showDot();
     bant.src = slides[icur].image;
     bant.alt = slides[icur].alt;
 
     banb.src = slides[ipre].image;
     banb.alt = slides[ipre].alt;
+}
+
+function showDot() {
+    let alldots = document.querySelectorAll(".fa-circle");
+    alldots[ipre].classList.remove("dot_selected");
+    alldots[ipre].classList.add("dot");
+    alldots[icur].classList.remove("dot");
+    alldots[icur].classList.add("dot_selected");
 }
 
 arol.addEventListener("click", () => {
