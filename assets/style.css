@@ -111,11 +111,62 @@ header {
 	left: 60px;
 	z-index: 2;
 }
+#arrowleft:active ~ .banner-top {
+		animation-name: toprighttoleft;
+		animation-duration: 3000ms;
+		animation-iteration-count: 1;
+		/*animation-direction: alternate;*/
+		animation-timing-function: cubic-bezier(0.67, 0.14, 0.18, 0.61);
+		/*animation-fill-mode: both;*/
+}
+#arrowleft:active ~ .banner-bot {
+		animation-name: botrighttoleft;
+		animation-duration: 3000ms;
+		animation-iteration-count: 1;
+		/*animation-direction: alternate;*/
+		animation-timing-function: cubic-bezier(0.67, 0.14, 0.18, 0.61);
+		/*animation-fill-mode: both;*/
+}
+
+@keyframes toprighttoleft {
+	0% {left: 100%;}
+	100% {left: 0;}
+}
+@keyframes botrighttoleft {
+	0% {left: 0;}
+	99% {left: -100%;}
+	100% {left: 0;}
+}
 #arrowright {
 	position: absolute;
 	top: 215px;
 	left: 95%;
 	z-index: 2;
+}
+#arrowright:active ~ .banner-top {
+	animation-name: toplefttoright;
+	animation-duration: 1000ms;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-timing-function: cubic-bezier(0.67, 0.14, 0.18, 0.61);
+	/*animation-fill-mode: both;*/
+}
+#arrowright:active ~ .banner-bot {
+	animation-name: botlefttoright;
+	animation-duration: 1000ms;
+	animation-iteration-count: 1;
+	/*animation-direction: alternate;*/
+	animation-timing-function: cubic-bezier(0.67, 0.14, 0.18, 0.61);
+	/*animation-fill-mode: both;*/
+}
+@keyframes toplefttoright {
+	0% {left: -100%;}
+	100% {left: 0;}
+}
+@keyframes botlefttoright {
+	0% {left: 0;}
+	99% {left: 100%;}
+	100% {left: 0;}
 }
 #banner {
 	position: relative;
