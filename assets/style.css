@@ -189,6 +189,9 @@ header {
 	z-index: -1;
 	object-fit: cover;
 }
+.inactive {
+	z-index: 2;
+}
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 /*

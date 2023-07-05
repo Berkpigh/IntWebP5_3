@@ -9,13 +9,19 @@ const arol = document.getElementById("arrowleft");
 const aror = document.getElementById("arrowright");
 const bant = document.querySelector(".banner-top");
 const banb = document.querySelector(".banner-bot");
+const dots = document.querySelector(".dots");
 
 let imin = 0;
 let imax = slides.length - 1;
 let icur = 0;
 let ipre = imax;
 
-nextImage();
+let dot = "";
+for (let j=0; j <= imax; j++) {
+    dot = document.createElement("i");
+    dot.classlist.add("fa-regular", "fa-circle", "inactive");
+    dots.appendChild(dot);
+}
 
 function nextImageIndex(gd) {
     ipre = icur;
@@ -42,3 +48,5 @@ aror.addEventListener("click", () => {
     icur = nextImageIndex(1);
     nextImage();
 });
+
+nextImage();
