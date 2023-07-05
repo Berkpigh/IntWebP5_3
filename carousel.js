@@ -24,7 +24,6 @@ for (let j=0; j <= imax; j++) {
         dot.classList.add("fa-regular", "fa-circle", "dot");
     }
     dots.appendChild(dot);
-    console.log(j)
 }
 
 function nextImageIndex(gd) {
