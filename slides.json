@@ -1,0 +1,26 @@
+[
+	{
+        "id": 1,
+        "image":"./assets/images/slideshow/slide1.jpg",
+        "alt": "Impressions tous formats",
+		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+	},
+	{
+        "id": 2,
+		"image":"./assets/images/slideshow/slide2.jpg",
+        "alt": "Tirages haute définition",
+		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+	},
+	{
+        "id": 3,
+		"image":"./assets/images/slideshow/slide3.jpg",
+        "alt": "Grand choix de couleurs",
+		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+	},
+	{
+        "id": 4,
+		"image":"./assets/images/slideshow/slide4.png",
+        "alt": "Autocollants",
+		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+	}
+]
