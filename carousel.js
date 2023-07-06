@@ -10,6 +10,7 @@ const aror = document.getElementById("arrowright");
 const bant = document.querySelector(".banner-top");
 const banb = document.querySelector(".banner-bot");
 const dots = document.querySelector(".dots");
+const tagl = document.getElementById("tagline");
 
 let imin = 0;
 let imax = slides.length - 1;
@@ -41,6 +42,7 @@ function nextImage() {
 
     banb.src = slides[ipre].image;
     banb.alt = slides[ipre].alt;
+    tagl.innerHTML = slides[icur].tagLine;
 }
 
 function showDot() {
